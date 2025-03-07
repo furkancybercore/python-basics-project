@@ -9,21 +9,28 @@
 ## Step 1: Initialize the Project
 1.1 Create a New Repository
 ```
-mkdir python-learning-project
-cd python-learning-project
-git init
+mkdir python-learning-project   //Creates a new directory.
+cd python-learning-project      //Changes to the directory.
+git init                        //Initializes a new Git repository.
 ```
 
 ## Step 2: Create main Branch
 ### 2.1 Add Basic Python Script
 ```
-touch main.py
-git add main.py
-git commit -m "Create main.py"
+touch main.py                    // Creates an empty file.
+git add main.py                  // Stages the file for commit.
+git commit -m "Create main.py"   // Saves the file to the repository.
 ```
 
 ## Step 3: Person1’s Work (Branch person1)
 ### 3.1 Variables, Strings, and Lists
+```
+git checkout -b person1                             //Creates and switches to a new branch.
+git add main.py                                    
+git commit -m "Add variables, strings, and lists"
+```
+
+
 ```
 # main.py
 # Variables and Data Types
@@ -42,11 +49,7 @@ fruits.append("cherry")         # Add item to list
 fruits.remove("apple")          # Remove item from list
 print(f"Fruits: {fruits}")      # Output: ["banana", "cherry"]
 ```
-```
-git checkout -b person1
-git add main.py
-git commit -m "Add variables, strings, and lists"
-```
+
 
 ### 3.2 Conditional Statements
 ```
@@ -147,8 +150,8 @@ git commit -m "Add string slicing and methods"
 ## Step 5: Merge Branches into main
 ### 5.1 Merge person1 into main
 ```
-git checkout main
-git merge person1
+git checkout main      //Change working branch
+git merge person1      //Combines changes from one branch into another.
 ```
 
 ### 5.2 Merge person2 into main
@@ -226,6 +229,12 @@ clean_message = message.strip().capitalize()
 print(clean_message)
 
 ```
+
+```
+git remote add origin https://github.com/.../....git    //Links your local repo to GitHub.
+git push -u origin main                                 // Uploads your code to GitHub.
+```
+
 # Git Command Summary
 ## Command	Explanation
 * **git init**                      : Creates a new Git repository.
