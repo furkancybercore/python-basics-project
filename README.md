@@ -1,4 +1,4 @@
-# Git and Python Learning Guide
+# Git Learning Guide (python basics project)
 
 * Scenario: Collaborative Python Project
 * Project Name: python-learning-project
