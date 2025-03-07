@@ -24,3 +24,14 @@ elif score >= 80:
 else:
     grade = "C"
 print(f"Grade: {grade}")        # Output: B
+
+# Looping Through Lists
+numbers = [1, 2, 3]
+squared = []
+for num in numbers:
+    squared.append(num ** 2)    # Append squared values
+print(f"Squared: {squared}")    # Output: [1, 4, 9]
+
+# List Comprehensions (compact loop)
+cubed = [num ** 3 for num in numbers]
+print(f"Cubed: {cubed}")        # Output: [1, 8, 27]
