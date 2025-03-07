@@ -1,31 +1,30 @@
-# Git and Python Learning Guide (Expanded)
-## Scenario: Collaborative Python Project
-### Project Name: python-learning-project
+# Git and Python Learning Guide
 
-Branches: main, person1, person2
+* Scenario: Collaborative Python Project
+* Project Name: python-learning-project
+* Branches: main, person1, person2
+* Goal: Create a Python script (main.py) with fundamental Python concepts.
+* Collaboration Workflow: Person1 and Person2 work on separate branches, commit changes, and merge into main.
 
-Goal: Create a Python script (main.py) with fundamental Python concepts.
-
-Collaboration Workflow: Person1 and Person2 work on separate branches, commit changes, and merge into main.
-
-Step 1: Initialize the Project
+## Step 1: Initialize the Project
 1.1 Create a New Repository
-bash
-Copy
+```
 mkdir python-learning-project
 cd python-learning-project
 git init
-Step 2: Create main Branch
-2.1 Add Basic Python Script
-bash
-Copy
+```
+
+## Step 2: Create main Branch
+### 2.1 Add Basic Python Script
+```
 touch main.py
 git add main.py
 git commit -m "Create main.py"
-Step 3: Person1’s Work (Branch person1)
-3.1 Variables, Strings, and Lists
-python
-Copy
+```
+
+## Step 3: Person1’s Work (Branch person1)
+### 3.1 Variables, Strings, and Lists
+```
 # main.py
 # Variables and Data Types
 name = "Alice"                  # String type
@@ -42,14 +41,15 @@ fruits = ["apple", "banana"]
 fruits.append("cherry")         # Add item to list
 fruits.remove("apple")          # Remove item from list
 print(f"Fruits: {fruits}")      # Output: ["banana", "cherry"]
-bash
-Copy
+```
+```
 git checkout -b person1
 git add main.py
 git commit -m "Add variables, strings, and lists"
-3.2 Conditional Statements
-python
-Copy
+```
+
+### 3.2 Conditional Statements
+```
 # Conditional Logic
 score = 85
 if score >= 90:
@@ -59,13 +59,14 @@ elif score >= 80:
 else:
     grade = "C"
 print(f"Grade: {grade}")        # Output: B
-bash
-Copy
+```
+```
 git add main.py
 git commit -m "Add conditional statements"
-3.3 Loops and List Methods
-python
-Copy
+```
+
+### 3.3 Loops and List Methods
+```
 # Looping Through Lists
 numbers = [1, 2, 3]
 squared = []
@@ -76,14 +77,16 @@ print(f"Squared: {squared}")    # Output: [1, 4, 9]
 # List Comprehensions (compact loop)
 cubed = [num ** 3 for num in numbers]
 print(f"Cubed: {cubed}")        # Output: [1, 8, 27]
-bash
-Copy
+```
+
+```
 git add main.py
 git commit -m "Add loops and list methods"
-Step 4: Person2’s Work (Branch person2)
-4.1 Dictionaries and Error Handling
-python
-Copy
+```
+
+## Step 4: Person2’s Work (Branch person2)
+### 4.1 Dictionaries and Error Handling
+```
 # Dictionaries (key-value pairs)
 person = {
     "name": "Bob",
@@ -98,14 +101,15 @@ try:
     age = int(age_input)        # May raise ValueError
 except ValueError:
     print("Invalid age!")       # Handles non-integer input
-bash
-Copy
+```
+```
 git checkout -b person2
 git add main.py
 git commit -m "Add dictionaries and error handling"
-4.2 File Operations
-python
-Copy
+```
+
+### 4.2 File Operations
+```
 # Writing to a File
 with open("data.txt", "w") as file:
     file.write("Hello, World!") # Creates/overwrites data.txt
@@ -117,13 +121,14 @@ try:
     print(f"File content: {content}")  # Output: Hello, World!
 except FileNotFoundError:
     print("File not found!")
-bash
-Copy
+```
+```
 git add main.py
 git commit -m "Add file operations"
-4.3 String Slicing and Methods
-python
-Copy
+```
+
+### 4.3 String Slicing and Methods
+```
 # String Slicing
 text = "Python is fun!"
 print(text[0:6])                # Output: Python
@@ -133,19 +138,21 @@ print(text.split())             # Split into list: ["Python", "is", "fun!"]
 message = "  hello world  "
 clean_message = message.strip().capitalize()
 print(clean_message)            # Output: Hello world
-bash
-Copy
+```
+```
 git add main.py
 git commit -m "Add string slicing and methods"
-Step 5: Merge Branches into main
-5.1 Merge person1 into main
-bash
-Copy
+```
+
+## Step 5: Merge Branches into main
+### 5.1 Merge person1 into main
+```
 git checkout main
 git merge person1
-5.2 Merge person2 into main
-bash
-Copy
+```
+
+### 5.2 Merge person2 into main
+```
 git merge person2
 Final main.py After Merging
 python
@@ -217,14 +224,16 @@ print(text.split())
 message = "  hello world  "
 clean_message = message.strip().capitalize()
 print(clean_message)
-Git Command Summary
-Command	Explanation
-git init	Creates a new Git repository.
-git checkout -b <branch>	Creates and switches to a new branch.
-git add <file>	Stages changes for the next commit.
-git commit -m "message"	Saves changes with a descriptive message.
-git merge <branch>	Combines changes from one branch into another.
-git push origin <branch>	Uploads local commits to a remote repository (e.g., GitHub).
+
+```
+# Git Command Summary
+## Command	Explanation
+### git init	Creates a new Git repository.
+### git checkout -b <branch>	Creates and switches to a new branch.
+### git add <file>	Stages changes for the next commit.
+### git commit -m "message"	Saves changes with a descriptive message.
+### git merge <branch>	Combines changes from one branch into another.
+### git push origin <branch>	Uploads local commits to a remote repository (e.g., GitHub).
          
 # Key Python Concepts Covered
          
