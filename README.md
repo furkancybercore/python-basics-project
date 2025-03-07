@@ -228,12 +228,12 @@ print(clean_message)
 ```
 # Git Command Summary
 ## Command	Explanation
-### git init	Creates a new Git repository.
-### git checkout -b <branch>	Creates and switches to a new branch.
-### git add <file>	Stages changes for the next commit.
-### git commit -m "message"	Saves changes with a descriptive message.
-### git merge <branch>	Combines changes from one branch into another.
-### git push origin <branch>	Uploads local commits to a remote repository (e.g., GitHub).
+* **git init**                      : Creates a new Git repository.
+* **git checkout -b <branch>**	    : Creates and switches to a new branch.
+* **git add <file>**	            : Stages changes for the next commit.
+* **git commit -m "message"**	    : Saves changes with a descriptive message.
+* **git merge <branch>**	        : Combines changes from one branch into another.
+* **git push origin <branch>**	    : Uploads local commits to a remote repository (e.g., GitHub).
          
 # Key Python Concepts Covered
          
