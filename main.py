@@ -7,3 +7,9 @@ heigh = 179
 is_student = True
 
 print(f"Name: {name}, Age: {age}, Weigh: {weigh}, Heigh: {heigh}, Student: {is_student}")
+
+# Functions
+def greet(name):
+    return f"Hello, {name}"
+
+print(greet("Hong"))
