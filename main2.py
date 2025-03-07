@@ -14,3 +14,13 @@ fruits = ["apple", "banana"]
 fruits.append("cherry")         # Add item to list
 fruits.remove("apple")          # Remove item from list
 print(f"Fruits: {fruits}")      # Output: ["banana", "cherry"]
+
+# Conditional Logic
+score = 85
+if score >= 90:
+    grade = "A"
+elif score >= 80:
+    grade = "B"                 # This block executes
+else:
+    grade = "C"
+print(f"Grade: {grade}")        # Output: B
