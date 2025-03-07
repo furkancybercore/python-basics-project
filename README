@@ -1,6 +1,6 @@
-Git and Python Learning Guide (Expanded)
-Scenario: Collaborative Python Project
-Project Name: python-learning-project
+# Git and Python Learning Guide (Expanded)
+## Scenario: Collaborative Python Project
+### Project Name: python-learning-project
 
 Branches: main, person1, person2
 
