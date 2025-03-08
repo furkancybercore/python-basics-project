@@ -1,5 +1,23 @@
 # Git Learning Guide (python basics project)
 
+## Step 0: Basic Git Commands
+
+```
+git init                     # Initialize a new Git repository in the current folder
+git status                   # Display the state of the repository (e.g., modified files)
+git add .                    # Stage all changes in the current directory
+git commit -m "Message"      # Commit changes with a message
+git push -u origin Person1   # Push branch Person1 to the remote repository
+git branch                   # List existing branches
+git checkout -b Person1      # Create and switch to a branch named Person1
+git checkout main            # Switch back to the main branch
+git merge Person1            # Merge branch 'Person1' into the current branch
+git push -u origin Person1   # Push branch Person1 to the remote repository
+git pull                     # Fetch and merge changes from remote repository
+
+```
+
+
 * Scenario: Collaborative Python Project
 * Project Name: python-learning-project
 * Branches: main, person1, person2
@@ -9,9 +27,9 @@
 ## Step 1: Initialize the Project
 1.1 Create a New Repository
 ```
-mkdir python-learning-project   //Creates a new directory.
-cd python-learning-project      //Changes to the directory.
-git init                        //Initializes a new Git repository.
+mkdir python-learning-project   // Creates a new directory.
+cd python-learning-project      // Changes to the directory.
+git init                        // Initializes a new Git repository.
 ```
 
 ## Step 2: Create main Branch
@@ -20,14 +38,16 @@ git init                        //Initializes a new Git repository.
 touch main.py                    // Creates an empty file.
 git add main.py                  // Stages the file for commit.
 git commit -m "Create main.py"   // Saves the file to the repository.
+git push -u origin main          // Push the main branch to remote repository
 ```
 
 ## Step 3: Person1’s Work (Branch person1)
 ### 3.1 Variables, Strings, and Lists
 ```
-git checkout -b person1                             //Creates and switches to a new branch.
-git add main.py                                    
-git commit -m "Add variables, strings, and lists"
+git checkout -b person1                              // Creates and switches to a new branch.
+git add .                                            // Stages all changes in the current directory for commit
+git commit -m "Add variables, strings, and lists"    // Commits the staged changes with a descriptive message
+git push -u origin main                              // Push the main branch to remote repository
 ```
 
 
@@ -42,6 +62,10 @@ is_student = True               # Boolean type
 # String Manipulation
 greeting = f"Hello, {name}!"    # f-string for formatting
 print(greeting.upper())         # Convert to uppercase: "HELLO, ALICE!"
+
+text = "Hello, Ubuntu!"      # Define a string
+upper_text = text.upper()    # Convert the string to uppercase
+print(upper_text)            # Output: "HELLO, UBUNTU!"
 
 # List Operations
 fruits = ["apple", "banana"]
